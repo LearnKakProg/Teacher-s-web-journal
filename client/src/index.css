@@ -1,0 +1,750 @@
+body {
+  background-color: #F5F5DC;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+  .login-wrapper {
+  background-color: #F5F5DC;
+  height: 100dvh;
+  @supports not (height: 100dvh) {
+    height: 100vh;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+/* логин */
+.login-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-top: 0;
+  color: #5d4037;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.login-card input:focus {
+  border-color: #8d6e63;
+  outline: none;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5d4037;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-card button:hover {
+  background-color: #4e342e;
+}
+/* расписание */
+.schedule-lesson-row {
+  display: flex;           
+  align-items: center;     
+  
+
+  border: 1px solid #ccc; 
+  border-radius: 8px;      
+  padding: 10px 15px;      
+  margin-bottom: 10px;     
+  background-color: #fff; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+.lesson-time {
+  font-weight: bold;
+  margin-right: 20px;      
+  color: #444;
+  min-width: 60px;         
+}
+
+
+.lesson-info {
+  flex-grow: 1;            
+}
+
+.lesson-subject {
+  font-size: 16px;
+  color: #000;
+}
+
+.lesson-group {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;         
+}
+
+.schedule-day-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.schedule-header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.create-lesson-form {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fafafa;
+  max-width: 460px;
+}
+
+.create-lesson-form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.create-lesson-form input,
+.create-lesson-form select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 4px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.create-lesson-form input:focus,
+.create-lesson-form select:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 4px rgba(25, 118, 210, 0.25);
+}
+
+.create-lesson-form h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #424242;
+}
+
+.create-lesson-form button {
+  width: 100%;
+  padding: 10px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.create-lesson-form button:hover {
+  background: #1565c0;
+}
+
+.create-lesson-form .cancel-btn {
+  margin-top: 0.5rem;
+  background: #777;
+}
+.create-lesson-form .cancel-btn:hover {
+  background: #555;
+}
+
+/* Хэдер */
+.header-panel {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-content h3 {
+  margin: 0;
+  color: #333;
+}
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  min-width: 150px
+}
+
+.header-link h3 {
+  margin: 0;
+}
+
+.header-link:hover h3 {
+  opacity: 0.8;
+}
+
+/* Кнопка выхода */
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Кнопка добавления */
+.create-btn {
+  background-color: #28a745; /* Зеленый */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.create-btn:hover {
+  background-color: #218838;
+}
+
+/* Фильтром расписания через выпадающее меню*/
+.controls-panel {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  display: inline-block;
+}
+.controls-panel select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Форма создания расписания */
+.create-lesson-form {
+  background: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #ced4da;
+}
+.create-lesson-form h3 {
+  margin-top: 0;
+}
+.create-lesson-form input, 
+.create-lesson-form select {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Кнопка удаления урока */
+.delete-lesson-btn {
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 10px;
+  margin-left: 10px;
+
+  transition: color 0.2s;
+}
+
+.delete-lesson-btn:hover {
+  color: #d9534f;
+}
+
+/* АДМИН */
+.admin-container {
+  max-width: 500px;
+  overflow-x: auto;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-actions .edit-btn {
+  background-color: #1565c0;
+  color: #fff;
+}
+
+.admin-actions .delete-btn {
+  background-color: #c62828;
+  color: #fff;
+}
+
+.admin-form .form-group {
+  margin-bottom: 20px;
+}
+
+.admin-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.admin-tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.admin-tab-bar button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+.admin-tab-bar button.active-tab {
+  background: #1565c0;
+  color: #fff;
+}
+
+.admin-container .trimestre-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.admin-container .trimestre-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+}
+
+.admin-panel-btn {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-panel-btn:hover {
+  background-color: #138496;
+}
+
+.admin-panel-btn, .logout-btn {
+  white-space: nowrap;
+}
+
+.admin-form input, 
+.admin-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+  font-size: 14px;
+}
+
+.admin-form input:focus, 
+.admin-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+.profile-header {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #007bff;
+  margin-bottom: 30px;
+}
+
+.text-muted {
+  color: #6c757d;
+  margin: 5px 0;
+}
+
+/* Журнал */
+.table-responsive {
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  table-layout: fixed
+}
+
+.journal-table-container {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.journal-table {
+  width: auto;
+  width: max-content;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: white;
+}
+
+.journal-table th:first-child, 
+.journal-table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 8px;
+}
+
+.journal-table th:last-child, 
+.journal-table td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.journal-table td:first-child {
+  text-align: left;
+  white-space: normal;
+}
+
+.journal-table th, .journal-table td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 60px;
+  white-space: nowrap !important;
+}
+.journal-table th {
+  background-color: #e9ecef;
+  font-weight: bold;
+  color: #333;
+}
+
+.sticky-col {
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.subject-col {
+  min-width: 180px;
+  max-width: 200px;
+}
+
+/* Sticky last column (average score) */
+.sticky-col-right {
+  position: sticky;
+  right: 0;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+.avg-col {
+  min-width: 100px;
+  font-weight: bold;
+}
+
+/* Header cells sticky */
+.journal-table thead th.sticky-col,
+.journal-table thead th.sticky-col-right {
+  z-index: 3;
+  background-color: #f5f5f5;
+}
+
+
+.excellent-cell {
+  background-color: #c8e6c9 !important;
+  color: #2e7d32;
+}
+
+.good-cell {
+  background-color: #fff9c4 !important;
+  color: #f57f17;
+}
+
+.satisfactory-cell {
+  background-color: #ffe0b2 !important;
+  color: #e65100;
+}
+
+.avg-poor {
+  background-color: #ffcdd2 !important;
+  color: #c62828;
+}
+
+.trimestre-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.trimestre-select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 300px;
+}
+
+.empty-cell { background-color: #f9f9f9; }
+.absent-cell { background-color: #c62828; }
+.sick-cell { background-color: #1565c0;}
+.grade-cell { background-color: #c8e6c9; font-weight: bold; }
+
+/* Учитель */
+
+.teacher-dashboard-wrapper {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.teacher-form .form-group {
+  margin-bottom: 15px;
+}
+
+.teacher-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*удаление*/
+.cell-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-grade-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.delete-grade-btn:hover {
+  opacity: 1;
+  transform: scale(1.4);
+}
+/**/
+.teacher-form input, 
+.teacher-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.journal-filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+.journal-filters select,
+.journal-filters input[type="month"] {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.grade-form-wrapper {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+  padding-bottom: 1rem;
+}
+
+.journal-scroll-wrapper {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+
+/* ПОИСК */
+.search-container {
+  flex-grow: 1;
+  max-width: 600px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+
+/* ВЫПАДАЮЩИЙ СПИСОК */
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1001;
+}
+
+.search-result-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background 0.1s;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: #e9ecef;
+}
+
+.search-role {
+  font-size: 12px;
+  color: #6c757d;
+  margin-left: 5px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  min-width: 150px;
+  justify-content: flex-end;
+}
+
+
+/* ДЛЯ ОСТАЛЬНЫХ СТРАНИЦ */
+.app-container {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
